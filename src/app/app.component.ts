@@ -14,6 +14,8 @@ export class AppComponent  {
 
   showCorrectMessage = false;
   showWrongMessage = false;
+
+  ferdig = false;
 	
   guessMovie(movieClicked){
     if(movieClicked == this.movie1){
@@ -35,11 +37,14 @@ export class AppComponent  {
   clickedCorrectly(){
     this.showCorrectMessage = true;
     this.showWrongMessage = false;
+    this.ferdig = true;
   }
 
   clickedFalsely(){
     this.showWrongMessage = true;
     this.showCorrectMessage = false;
+    this.ferdig = true;
+
   }
 
   playAgain(){
@@ -47,6 +52,7 @@ export class AppComponent  {
     this.movie2 = this.movieListService.randomMovieGenerator();
     this.showCorrectMessage = false;
     this.showWrongMessage = false;
+    this.ferdig = false;
 
   }
 }

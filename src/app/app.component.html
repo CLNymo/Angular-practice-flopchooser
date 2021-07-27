@@ -1,11 +1,11 @@
-<h4>Flopchooser</h4>
+<h4>Floppfilm-gjetter</h4>
 
 <div style="margin-bottom:2rem" >
-  <p>Which movie has a lower IMDB rating?</p>
-  <p [hidden]="!(this.showCorrectMessage)">Correct answer!</p>
-  <p [hidden]="!(this.showWrongMessage)">Wrong guess :(</p>
+  <p>Hvilken film har høyest score på IMDB?</p>
+  <p [hidden]="!(this.showCorrectMessage)">Riktig!</p>
+  <p [hidden]="!(this.showWrongMessage)">NEiass lol :(</p>
   
-  <button class="btn btn-primary" (click)="playAgain()">Play Again</button>
+  <button [hidden]="!ferdig" class="btn btn-primary" (click)="playAgain()">Prøv igjen</button>
   
 </div>
 
