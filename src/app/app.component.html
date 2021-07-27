@@ -1,0 +1,17 @@
+<h4>Flopchooser</h4>
+
+<div style="margin-bottom:2rem" >
+  <p>Which movie has a lower IMDB rating?</p>
+  <p [hidden]="!(this.showCorrectMessage)">Correct answer!</p>
+  <p [hidden]="!(this.showWrongMessage)">Wrong guess :(</p>
+  
+  <button class="btn btn-primary" (click)="playAgain()">Play Again</button>
+  
+</div>
+
+<my-movie-display 
+  [movie1]="movie1"
+  [movie2]="movie2"
+  (clickMovie1Emitter)="guessMovie(movie1)" 
+  (clickMovie2Emitter)="guessMovie(movie2)">
+</my-movie-display>
